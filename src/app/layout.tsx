@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
-import Head from "next/head";
-import "./globals.css";
+import "./globals.scss";
 
 export const metadata: Metadata = {
   title: "Pokédex",
@@ -14,12 +13,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
       <body>
         {children}
       </body>
