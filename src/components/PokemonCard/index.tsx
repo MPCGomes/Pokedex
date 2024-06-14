@@ -9,7 +9,7 @@ interface PokemonCardProps {
   types: string[];
 };
 
-const capitalize = (s: string) => s.charAt(0).toUpperCase + s.slice(1);
+const capitalize = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 const PokemonCard: React.FC<PokemonCardProps> = ({ id, name, image, types }) => (
   <div className={styles.card}>
@@ -25,7 +25,7 @@ const PokemonCard: React.FC<PokemonCardProps> = ({ id, name, image, types }) => 
       <h3 className={styles.name}>
         {capitalize(name)}
       </h3>
-      <div className={styles.type}>
+      <div className={styles.types}>
         {types.map((type) => (
           <TypeBadge key={type} type={capitalize(type)} />
         ))}
